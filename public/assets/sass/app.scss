@@ -1,0 +1,29 @@
+body, 
+select, 
+input, 
+button, 
+textarea {
+  font: {
+    family: 'Source Code Pro', monospace !important;
+    size: 0.8rem;
+  }
+}
+main {
+  button.back {
+    margin: {
+      top: 3rem;
+    }
+  }
+  #output {
+    background: {
+      color: rgba(188, 188, 0, 0.4);
+    }
+    border: {
+      color: rgba(188, 188, 0, 1);
+      style: solid;
+      width: thin;
+    }
+    margin: 1rem 0;
+    padding: 1rem;
+  }
+}

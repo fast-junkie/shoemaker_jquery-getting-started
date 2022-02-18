@@ -1,0 +1,10 @@
+# Exercise template directory...
+x00/
+
+# Generated directories...
+public/assets/css/
+public/assets/vendor/
+
+# Dev assets...
+node_modules/
+package-lock.json
