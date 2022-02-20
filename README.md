@@ -14,4 +14,4 @@ ___
 
 ### Summary
 ---
-:skull:
+:skull: I aimlessly went through Craig's example pages... then went through all the modules.

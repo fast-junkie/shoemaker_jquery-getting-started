@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/vendor/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/assets/static/highlightjs/default.min.css">
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <title></title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-dark bg-dark" role="navigation">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">jQuery: Getting Started</a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navbar" class="navbar-collapse collapse justify-content-end">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a href="/docs/hello-world.html" class="nav-link">Hello World</a></li>
+            <li class="nav-item"><a href="/docs/example-page.html" class="nav-link">Example Page</a></li>
+            <li class="nav-item"><a href="/docs/resources.html" class="nav-link">Resources</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container">
+      <h2>Hello World!</h2>
+      <pre class="code"><code id="code-container" class="language-javascript"></code></pre>
+        
+      <footer>
+        Created by <a href="http://craigshoemaker.net/about" target="_blank">Craig Shoemaker</a> for 
+        <a href="http://www.pluralsight.com/author/craig-shoemaker" target="_blank">Pluralsight</a>
+        <div>
+          Brutally mutalated and buchered by <em>&quot;the&quot;</em> 
+          <a href="https://keybase.io/fastjunkie/" target="_blank">Fast Junkie</a>
+        </div>
+      </footer>
+    </main>
+
+    <script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="/assets/static/highlightjs/highlight.min.js"></script>
+    <script src="/assets/js/app.js"></script>
+    <script id="code-block">
+      $(function () {
+          console.debug('hello world');
+      });
+    </script>
+  </body>
+</html>

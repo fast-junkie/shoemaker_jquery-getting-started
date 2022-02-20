@@ -6,7 +6,8 @@
   },
   "globals": {
     "jQuery": true,
-    "$": true
+    "$": true,
+    "hljs": true
   },
   "extends": ["airbnb-base"],
   "rules": {

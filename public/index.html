@@ -7,17 +7,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/vendor/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/vendor/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./assets/static/highlightjs/default.min.css">
     <link rel="stylesheet" href="./assets/css/app.css">
     <title></title>
   </head>
   <body>
 
+    <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-dark bg-dark" role="navigation">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./">jQuery: Getting Started</a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navbar" class="navbar-collapse collapse justify-content-end">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a href="./docs/hello-world.html" class="nav-link">Hello World</a></li>
+            <li class="nav-item"><a href="./docs/example-page.html" class="nav-link">Example Page</a></li>
+            <li class="nav-item"><a href="./docs/resources.html" class="nav-link">Resources</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
     <main class="container">
-      
+      <h1>Welcome</h1>
+      <p>Get started with jQuery by using the following demos. All you need is right in your browser!</p>
+      <div class="linked-rows">
+        <a href="./docs/hello-world.html">
+          <div class="row">
+            <div class="col-sm-6 text-end">
+              <h2>Hello World</h2>
+              <p class="small">Learn about one of the simplest jQuery commands possible.</p>
+            </div>
+            <div class="col-sm-6">
+              <img src="./assets/img/hello-world.png" class="img-fluid" />
+            </div>  
+          </div>
+        </a>
+        <a href="./docs/example-page.html">
+          <div class="row">
+            <div class="col-sm-6 text-end">
+              <img src="./assets/img/demo.png" class="img-fluid float-end" />
+            </div>
+            <div class="col-sm-6">
+              <h2>Using jQuery</h2>
+              <p class="small">
+                Interact with an example page by opening up the browser's console window 
+                (<code>F12</code> in most browsers) 
+                and executing jQuery commands directly against the page.
+              </p>
+              <p class="small">For example, try:</p>
+              <p class="small"><code>$('h2').addClass('highlight');</code></p>
+            </div>
+          </div>
+        </a>
+        <a href="./docs/resources.html">
+          <div class="row">
+            <div class="col-sm-6 text-end">
+              <h2>Resources</h2>
+              <p class="small">Links to all the scripts you need to get started with jQuery in your applications.</p>
+            </div>
+            <div class="col-sm-6">
+              <img src="./assets/img/resources.png" class="img-fluid" />
+            </div>
+          </div>
+        </a>
+      </div>
+        
+      <footer>
+        Created by <a href="http://craigshoemaker.net/about" target="_blank">Craig Shoemaker</a> for 
+        <a href="http://www.pluralsight.com/author/craig-shoemaker" target="_blank">Pluralsight</a>
+        <div>
+          Brutally mutalated and buchered by <em>&quot;the&quot;</em> 
+          <a href="https://keybase.io/fastjunkie/" target="_blank">Fast Junkie</a>
+        </div>
+      </footer>
     </main>
 
     <script src="./assets/vendor/jquery/dist/jquery.min.js"></script>
     <script src="./assets/vendor/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="./assets/static/highlightjs/highlight.min.js"></script>
     <script src="./assets/js/app.js"></script>
   </body>
 </html>

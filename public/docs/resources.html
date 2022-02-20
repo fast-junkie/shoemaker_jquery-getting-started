@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/vendor/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/assets/static/highlightjs/default.min.css">
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <title></title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-dark bg-dark" role="navigation">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">jQuery: Getting Started</a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navbar" class="navbar-collapse collapse justify-content-end">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a href="/docs/hello-world.html" class="nav-link">Hello World</a></li>
+            <li class="nav-item"><a href="/docs/example-page.html" class="nav-link">Example Page</a></li>
+            <li class="nav-item"><a href="/docs/resources.html" class="nav-link">Resources</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container">
+      <h2>Resources</h2>
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" aria-controls="home" role="tab" data-bs-target="#downloading-container" data-bs-toggle="tab">
+            Downloading
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" aria-controls="messages" role="tab" data-bs-target="#context-container" data-bs-toggle="tab">
+            jQuery in Context
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" aria-controls="profile" role="tab" data-bs-target="#tips-container" data-bs-toggle="tab">
+            Coding Tips
+          </button>
+        </li>
+      </ul>
+      <div class="tab-content mt-3">
+        <div id="downloading-container" class="tab-pane fade show active" role="tabpanel">
+          <div class="row">
+            <div class="col-sm-6">
+              <a href="http://jquery.com/" target="_blank"><img src="/assets/img/jquery.png" class="img-fluid" title="jQuery" /></a>
+            </div>
+            <div class="col-sm-6">
+              <p>
+                You can download jQuery directly from the <a href="http://jquery.com/download/" target="_blank">website</a>
+                where you have the option to do a direct download, use a CDN or get instructions on using Bower.
+              </p>
+              <p>
+                jQuery is available in verion <code>1.x</code> and <code>2.x</code>. Select version <code>2.x</code> 
+                if you do not need to support Internet Explorer 6, 7, or 8, otherwise version <code>1.x</code> is for you.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div id="context-container" class="tab-pane fade" role="tabpanel">
+          <div class="row">
+            <div class="col-sm-6">
+              <img src="/assets/img/jquery-ecosystem.png" class="img-fluid" alt="jQuery Ecosystem" title="jQuery Ecosystem" />
+            </div>
+            <div class="col-sm-6">
+              <p>
+                <a href="http://jquery.com">jQuery</a> belongs to a rich JavaScript ecosystem. jQuery 
+                is the foundation for scores of web applications and is the basis for component development 
+                found in <a href="http://jquery-ui.com">jQuery UI</a>.  jQuery UI is a set of user 
+                interface controls and interactions based on jQuery. 
+              </p>
+            </div>
+          </div>
+        </div>
+        <div id="tips-container" class="tab-pane fade" role="tabpanel">
+          <div class="row">
+            <div class="col-sm-12">
+              <div id="demo-js-container">
+                <p>
+                  While there are many concepts that are valuable for you to learn while mastering jQuery,
+                  paying attention to the following items will help you write effective JavaScript.
+                </p>
+                <div class="module-title">
+                  <a href="#function-code" data-bs-toggle="collapse" aria-expanded="false">Function Scope</a>
+                </div>
+                <div class="collapse" id="function-code">
+                  <p>
+                    Variables are in scope only in the context of the executing function. Read
+                    <a href="http://ryanmorr.com/understanding-scope-and-context-in-javascript/" target="_blank">Understanding Scope and Context in JavaScript</a>
+                    for a detailed explanation.
+                  </p>
+                  <pre><code class="language-javascript">const name = 'Junkie';
+
+function logName(){
+  console.debug(name);
+}
+
+logName();
+
+// --
+
+function logTwitter(){
+  const twitter = '@fast-junkie';
+  console.debug(twitter);
+}
+
+logTwitter();
+
+console.debug(twitter); // error
+
+// --
+
+function logFullName(){
+  const first = 'Fast';
+  function logName(){
+    const last = 'Junkie';
+    console.debug(`${first} ${last}`);
+  }
+  logName();
+}
+
+logFullName();</code></pre>
+              </div>
+              <div class="module-title">
+                <a href="#naming-code" data-bs-toggle="collapse" aria-expanded="false">Naming Conventions</a>
+              </div>
+              <div id="naming-code" class="collapse">
+                <p>Prefix variable names with a <code>$</code> for jQuery wrapped results.</p>
+                <pre><code class="language-javascript">const $h2 = $('h2'); // jquery
+
+const h2 = document.getElementsByTagName('h2'); // raw DOM</code></pre>
+                    
+                    <p class="push-down-top-md">The following code listing demonstrates why this 
+                    variable prefixing is valuable. Notice the variable
+                    named <code>item</code> as an argument for the <code>each</code> function. This
+                    variable represents the raw DOM element of the list item during the loop. The
+                    jQuery wrapped instance of the item is named <code>$item</code>. This practice
+                    makes it easy to tell which variable represents the raw DOM element and which 
+                    is the result of a jQuery selector.</p>
+            <pre><code class="language-javascript">const $items = $('#special-features li');
+  
+$items
+  .width('50%')
+  .height('200px')
+  .addClass('highlight bordered')
+  .each(function(index, item){
+    const $item = $(item);
+    $item.text(`${$item.text()} ${$item.attr('data-feature-id')}`);
+  });</code></pre>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+      <footer>
+        Created by <a href="http://craigshoemaker.net/about" target="_blank">Craig Shoemaker</a> for 
+        <a href="http://www.pluralsight.com/author/craig-shoemaker" target="_blank">Pluralsight</a>
+        <div>
+          Brutally mutalated and buchered by <em>&quot;the&quot;</em> 
+          <a href="https://keybase.io/fastjunkie/" target="_blank">Fast Junkie</a>
+        </div>
+      </footer>
+    </main>
+
+    <script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="/assets/static/highlightjs/highlight.min.js"></script>
+    <script src="/assets/js/app.js"></script>
+  </body>
+</html>
